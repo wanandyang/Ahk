@@ -1,7 +1,4 @@
-
-
 MsgBox "Hello,World"
-
 
 ^N::
 {
