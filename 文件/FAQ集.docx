@@ -1,0 +1,17 @@
+//定义用户名
+git config --global user.name "Your Name"
+
+//定义邮箱
+git config --global user.email "your.email@example.com"
+
+//解除代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+//查询代理
+git config --global --get http.proxy
+git config --global --get https.proxy
+
+1.如何获取窗口信息
+    利用自带软件AutoHotkey Windows SPY
+    如果WinExist获取不到，可以用ProcessExist
