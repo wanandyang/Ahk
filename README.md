@@ -1,1 +1,1 @@
-Hello,World
+Ahk2为调用Snipaste截图保存至word文档

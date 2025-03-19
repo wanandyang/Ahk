@@ -4,30 +4,28 @@
 ; The hotkey is Ctrl+Q.
 ^Q::
 {
-/*
-    IF WinExist("ahk_class Qt5QWindowToolSaveBits")
-    {
-        WinActivate
-    }
-    else
+    IF NOT ProcessExist("Snipaste.exe")
     {
         MsgBox "Snipaste is not open."
     }
-*/
-    ;Sleep 100
-    Send "{F1}"
-    Sleep 500
-    Send "{Enter}"
-    Sleep 500
-    IF WinExist("ahk_class OpusApp")
-    {
-        WinActivate
-    }
     else
     {
-        MsgBox "Word file is not open."
+        Sleep 100
+        Send "{F1}"
+        Sleep 100
+        Send "{Enter}"
+        Sleep 100
+        IF WinExist("ahk_class OpusApp")
+        {
+            WinActivate
+        }
+        else
+        {
+            MsgBox "Word file is not open."
+        }
+        WinWaitActive("ahk_class OpusApp")
+        Sleep 100
+        Send "^v"
     }
-    Sleep 500
-    Send "^v"
 }
 return
