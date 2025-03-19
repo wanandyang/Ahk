@@ -1,4 +1,7 @@
-﻿Gui Show, w620 h420, Window
+﻿Gui Add, Text, x32 y32 w120 h23 +0x200, Text
+Gui Add, Edit, x72 y32 w120 h25
+
+Gui Show, w620 h420, Window
 Return
 
 GuiEscape:
