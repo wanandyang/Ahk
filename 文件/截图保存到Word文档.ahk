@@ -16,14 +16,24 @@
         IF WinExist("ahk_class OpusApp")
         {
             WinActivate
+            WinWaitActive("ahk_class OpusApp")
+            Sleep 100
+            Send "^v"
+            Sleep 100
+            if WinExist("ahk_class Qt5QWindowOwnDCIcon")
+            {
+                WinActivate
+            }
+            else
+            {
+                 MsgBox "cMTViewer is not open."
+            }
         }
         else
         {
             MsgBox "Word file is not open."
         }
-        WinWaitActive("ahk_class OpusApp")
-        Sleep 100
-        Send "^v"
+        
     }
 }
 return
