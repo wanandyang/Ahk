@@ -1,5 +1,3 @@
-#Requires AutoHotkey v2.0
-
 ; This script is for snipping a part of the screen and pasting it into a Word file.
 ; The hotkey is Ctrl+Q.
 ^Q::
