@@ -15,3 +15,22 @@ git config --global --get https.proxy
 1.如何获取窗口信息
     利用自带软件AutoHotkey Windows SPY
     如果WinExist获取不到，可以用ProcessExist
+
+运行程序 Run "C:\Windows\notepad.exe"
+弹窗提示 MsgBox "Hi!"
+点击具体坐标 Click 100, 200
+打开网址 Run "http://dftg.net"
+延时1s Sleep 1000
+发送文本 Send "Hello!"
+
+修饰符是 Ctrl(^), Alt(!), Shift(+) 和 Win(#).
+
+*(通配符) 允许热键激活, 即使你按住的修饰键不在热键符号中.
+~(非抑制) 防止热键阻塞该键的原生功能.
+$(使用钩子) 防止在发送按键时出现无意义的循环, 并且在某些情况下使热键更可靠.
+
+#HotIf 指令可以用来指定激活热键必须满足的条件, 如:
+
+当您按下热键时, 某个特定应用程序的窗口处于活动状态.
+如果按下热键时, CapsLock 是打开的.
+可以用代码检测的任何其他条件.
