@@ -121,6 +121,10 @@ objSheet.Cells(3, 1).Borders.Color := 0x000000 ; 设置边框颜色为黑色
 ; 设置单元格格式为日期
 objSheet.Cells(4, 1).NumberFormat := "yyyy-mm-dd" ; 设置日期格式
 objSheet.Cells(4, 1).Value := "2023-10-01" ; 设置日期值为 2023-10-01
+
+; 自动调整列宽
+objSheet.Columns.AutoFit()
+
 ; 保存工作簿
 ;objWorkbook.SaveAs("D:\Example.xlsx")
 
