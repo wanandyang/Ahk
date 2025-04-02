@@ -35,8 +35,8 @@ if objSheet.Name != "示例工作表"
 ; 如果工作簿中的工作表数量少于 2，则添加第二个工作表
 if objWorkbook.Sheets.Count < 2
 {
-   objSheet2 := objWorkbook.Sheets.Add()
-   objSheet2.Name := "第二个工作表"
+    newSheet:= objWorkbook.Sheets.Add(,objSheet,3) ; 在第一个工作表后添加新工作表
+   
 }
 else
 {
@@ -55,6 +55,8 @@ objSheet.Cells(2, 1).Value := "第2行，第1列"
 objSheet.Cells(2, 2).Value := "第2行，第2列"
 objSheet.Cells(3, 1).Value := "第3行，第1列"
 objSheet.Cells(3, 2).Value := "第3行，第2列"
+
+objSheet.range("A1:B2").Value := "测试" ; 设置范围内的单元格值
 
 ; 设置单元格背景颜色
 objSheet.Cells(1, 1).Interior.Color := 0xFF0000 ; 
