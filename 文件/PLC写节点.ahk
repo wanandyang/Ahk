@@ -11,10 +11,10 @@ Constructor()
 	myGui := Gui()
 	myGui.Title := "W"
 
-	myGui.Add("Text", "x16 y8 w40 h20 +0x200", "Start：")
+	myGui.Add("Text", "x16 y8 w40 h20 +0x200", "Start:")
 	Start := myGui.Add("Edit", "x56 y8 w80 h20 +Number")
 
-	myGui.Add("Text", "x16 y35 w40 h20 +0x200", "End：")
+	myGui.Add("Text", "x16 y35 w40 h20 +0x200", "End:")
 	End := myGui.Add("Edit", "x56 y35 w80 h20 +Number")
 
 	ButtonOK := myGui.Add("Button", "x40 y70 w80 h23", "&OK")
