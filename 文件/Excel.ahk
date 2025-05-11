@@ -130,3 +130,15 @@ objSheet.Columns.AutoFit()
 
 ; 关闭 Excel
 ;objExcel.Quit()
+
+; 修改工作表内所有图片大小为 200*300
+for objPicture in objSheet.Pictures
+{
+    objPicture.Width := 200 ; 设置图片宽度为 200
+    objPicture.Height := 300 ; 设置图片高度为 300
+}
+
+; 修改最后粘贴的图片大小为 50*60
+lastPicture := objSheet.Pictures(objSheet.Pictures.Count)
+lastPicture.Width := 50 ; 设置图片宽度为 50
+lastPicture.Height := 60 ; 设置图片高度为 60
